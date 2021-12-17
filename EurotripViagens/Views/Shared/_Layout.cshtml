@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free Bootstrap 4 Theme by ProBootstrap.com">
+    <title>@ViewData["Title"] - EuroTrip</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="~/assets/css/all.css">
+
+    <link rel="stylesheet" href="~/assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/fonts/ionicons/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="~/assets/fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="~/assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/assets/css/select2.css">
+
+
+    <link rel="stylesheet" href="~/assets/css/helpers.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Eurotrip</a>
+            <div class="collapse navbar-collapse" id="probootstrap-menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Destinos">Destinos</a></li>
+                    <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Promocoes">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Create">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Viagem" asp-action="Create">Cadastro Viagem</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Contatoes" asp-action="Create">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+
+    <section class="probootstrap-cover overflow-hidden relative" style="background-image: url(assets/images/bg_1.jpg);" data-stellar-background-ratio="0.5" id="section-home">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md">
+                    <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Viaje com menos planos e mais liberdade</h2>
+                </div>
+            </div>
+            <div class="intro_slogan">
+                 <p class="intro_social">
+                        <span style="padding-left: 50px;" class="intro_social_icons">
+                            <a href="https://www.instagram.com/patriciabrandao7/" title="Siga no Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://m.facebook.com/patricia.brandao.1238" title="Curta no Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://open.spotify.com/playlist/7MC3NoeDfvdIHBey8KXya3" title="Ouça no Spotify"><i class="fab fa-spotify"></i></a>
+                            <a href="#" title="Inscreva-se no canal"><i class="fab fa-youtube"></i></a>
+                        </span>
+                 </p>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <main role="main" class="pb-3">
+
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="probootstrap_section probootstrap-border-top">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-12 text-center">
+                    <p class="probootstrap_font-14">&copy; 2021. All Rights Reserved. <br> Designed &amp; Developed by <a href="https://probootstrap.com/" target="_blank">Eurotrip</a><small><a href="#"></a>)</small></p>
+                    <p class="probootstrap_font-14">Imagens de: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+
+    <script src="assets/js/select2.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

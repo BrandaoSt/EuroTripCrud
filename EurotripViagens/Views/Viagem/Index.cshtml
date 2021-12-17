@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EurotripViagens.Models.Viagem>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Create">Criar nova partida e destino</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Partida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.CPF)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID_Viagem">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID_Viagem">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID_Viagem">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
